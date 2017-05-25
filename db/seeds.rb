@@ -6,6 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+3.times do |topic|
+  Topic.create!(
+
+      title: "Topic #{topic}"
+    )
+end
+
+
+  puts "3 topics created"
+
 10.times do |blog|
 
 Blog.create!(
@@ -27,7 +38,9 @@ A company's weighted average cost of capital (WACC) is comprised of the followin
 
 
 Read more: The Cost of Capital http://www.investopedia.com/exam-guide/cfa-level-1/corporate-finance/cost-of-capital.asp#ixzz4h0NXdENY 
-Follow us: Investopedia on Facebook"
+Follow us: Investopedia on Facebook",
+topic_id: Topic.last.id
+
   )
 
 
@@ -50,11 +63,27 @@ puts "10 blog posts created"
 
 
 
-9.times do  |portfolio_item|
+8.times do  |portfolio_item|
 
 Portfolio.create!(
       title: "Portfolio title: #{portfolio_item}",
-      subtitle: "My great service",
+      subtitle: "Ruby on rails",
+      body: "1. Cost of Debt In the WACC calculation, the after-tax cost of debt is used. Using the after-tax cost takes into account the tax savings from the tax-deductibility of interest.
+The after-tax cost of debt can be calculated as follows:
+Read more: The Cost of Capital http://www.investopedia.com/exam-guide/cfa-level-1/corporate-finance/cost-of-capital.asp#ixzz4h0P5ZGln 
+Follow us: Investopedia on Facebook",
+      main_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=350×150&w=350&h=150",
+      thumb_image: "https://placeholdit.imgix.net/~text?txtsize=33&txt=100×150&w=350&h=250",
+  )
+
+
+end
+
+1.times do  |portfolio_item|
+
+Portfolio.create!(
+      title: "Portfolio title: #{portfolio_item}",
+      subtitle: "Angular",
       body: "1. Cost of Debt In the WACC calculation, the after-tax cost of debt is used. Using the after-tax cost takes into account the tax savings from the tax-deductibility of interest.
 The after-tax cost of debt can be calculated as follows:
 Read more: The Cost of Capital http://www.investopedia.com/exam-guide/cfa-level-1/corporate-finance/cost-of-capital.asp#ixzz4h0P5ZGln 
